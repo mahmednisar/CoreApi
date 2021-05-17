@@ -1,19 +1,19 @@
-<Project Sdk="Microsoft.NET.Sdk.Web">
+<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>net5.0</TargetFramework>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Swashbuckle.AspNetCore" Version="5.6.3" />
-
+    <PackageReference Include="Microsoft.Extensions.Options" Version="5.0.0" />
+    <PackageReference Include="Microsoft.IdentityModel.Tokens" Version="6.11.0" />
+    <PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="6.11.0" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\CoreAPI.Dto\CoreAPI.Dto.csproj" />
     <ProjectReference Include="..\CoreApi.Helper\CoreApi.Helper.csproj" />
     <ProjectReference Include="..\CoreApi.Services.Infrastructure\CoreApi.Services.Infrastructure.csproj" />
-    <ProjectReference Include="..\CoreApi.Services\CoreApi.Services.csproj" />
     <ProjectReference Include="..\CoreApi.Utils\CoreApi.Utils.csproj" />
   </ItemGroup>
 

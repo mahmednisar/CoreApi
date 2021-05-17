@@ -12,6 +12,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using CoreApi.Core;
+using CoreApi.Helper;
 
 namespace CoreApi
 {
@@ -28,7 +29,7 @@ namespace CoreApi
         public void ConfigureServices(IServiceCollection services)
         {
             var dependency = new BindDependency(services);
-
+            services.Configure<AppSettings>(Configuration.GetSection("AppSetting"));
             services.AddControllers();
             services.AddSwaggerGen(c =>
             {
